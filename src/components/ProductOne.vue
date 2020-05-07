@@ -1,26 +1,18 @@
 <template>
   <div>
-   {{message}} i am {{form}}
-   <input type="text" v-model="message">
-   <button @click="getMessage">Click</button>
-
+  
+<div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+      <router-view/>
+    </div>
 </div>
 </template>
 
 <script>
 export default {
   name: 'ProductOne',
-  data:()=>({
-    message:null,
-    inputText:null,
-    form:"charu"
-  }),
-  methods:{
-    getMessage(){
-      this.message = this.inputText
-      this.inputText = null
-    }
-  }
+  
   
 }
 </script>
